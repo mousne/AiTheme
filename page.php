@@ -8,10 +8,6 @@
 
 $page_side_bar = snape_option('page_side_bar');
 $page_side_bar = (empty($page_side_bar)) ? 'right_side' : $page_side_bar;
-$background_color = snape_option('background_color');
-$background_image = snape_option('background_image');
-$page_banner_image = snape_option('page_banner_image');
-$page_banner_single_color = snape_option('page_banner_single_color');
 get_header(); ?>
 
 <?php if (have_posts()) : the_post(); update_post_caches($posts); ?>
@@ -26,7 +22,7 @@ get_header(); ?>
 		<div class='post-container <?php echo ($page_side_bar == 'single') ? 'col-md-12' : 'col-md-8'; ?>'>
 			<section>
 				<article>
-					<h1 class="post-title"><?php the_title(); ?></h1>
+					<h1 class="post-title"><?php if( get_the_title() == '' ){ echo '无标题'; } else { the_title(); }?></h1>
 					<div class="post-content">
 						<?php the_content(); ?>
 					</div>
@@ -36,11 +32,11 @@ get_header(); ?>
 						<div class="post-like-donate text-center clearfix" id="post-like-donate">
 
 							<?php if ( snape_option( 'page_like_donate' )==1 ) : ?>
-							<a href="<?php echo snape_option('donate_links'); ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>
+							<a href="<?php echo snape_option('donate_links'); ?>" class="donate"><i class="fa fa-bitcoin"></i> 打赏</a>
 							<?php endif; ?>
 
 							<?php if ( snape_option( 'page_share' )==1 ) : ?>
-							<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>
+							<a href="javascript:;"  class="share" ><i class="fa fa-share-alt"></i> 分享</a>
 							<div class="share-wrap" style="display: none;">
 								<div class="share-group">
 									<a href="javascript:;" class="share-plain twitter" onclick="share('qq');" rel="nofollow">

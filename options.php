@@ -134,18 +134,6 @@ function optionsframework_options() {
 			'right_side' => $imagepath . 'col-right.png')
 	);
 	$options[] = array(
-		'name' => '顶部颜色',
-		'desc' => '选择顶部颜色',
-		'id' => 'banner_single_color',
-		'std' => '#333333',
-		'type' => 'color' );
-	$options[] = array(
-		'name' => '顶部图片',
-		'desc' => '选择顶部图片，当上传顶部图片时，将自动覆盖顶部颜色',
-		'id' => 'banner_image',
-		'std' => get_template_directory_uri() . '/images/dark-wall.png',
-		'type' => 'upload');
-	$options[] = array(
 		'name' => '版权声明',
 		'desc' => '是否启用 CC BY-SA 4.0 声明',
 		'id' => 'post_cc',
@@ -179,18 +167,6 @@ function optionsframework_options() {
 			'left_side' => $imagepath . 'col-left.png',
 			'right_side' => $imagepath . 'col-right.png')
 	);	
-	$options[] = array(
-		'name' => '顶部颜色',
-		'desc' => '选择顶部颜色',
-		'id' => 'page_banner_single_color',
-		'std' => '#333333',
-		'type' => 'color' );
-	$options[] = array(
-		'name' => '顶部图片',
-		'desc' => '选择顶部图片，当上传顶部图片时，将自动覆盖顶部颜色',
-		'id' => 'page_banner_image',
-		'std' => get_template_directory_uri() . '/images/dark-wall.png',
-		'type' => 'upload');
 	$options[] = array(
 		'name' => '版权声明',
 		'desc' => '是否启用 CC BY-SA 4.0 声明',

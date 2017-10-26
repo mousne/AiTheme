@@ -6,8 +6,6 @@
  * @version 1.1
  */
 
-$background_color = snape_option('background_color');
-$background_image = snape_option('background_image');
 get_header(); ?>
 <div class="post-section blog-post" style="<?php echo (!snape_option('background_image')) ? 'background:' . $background_color  :'background-image: url('. $background_image .');' ; ?>">
     <div class="container">

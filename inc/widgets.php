@@ -120,7 +120,7 @@ class snape_widget_tags extends WP_Widget {
             );
         $result .= $before_widget;
         if($title) $result .= '<h4 class="widget-title"><span>'.$title .'</span></h4>';
-        $result .= '<div class="tag_clouds">';
+        $result .= '<div class="tag_clouds" id="tags-cloud">';
         $result .= $tags;
         $result .= '</div>';
         $result .= $after_widget;

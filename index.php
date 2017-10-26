@@ -5,12 +5,9 @@
  * @package Vtrois
  * @version 1.1
  */
-
-$background_color = snape_option('background_color');
-$background_image = snape_option('background_image');
 get_header(); ?>
 
-	<div class="main container" id="main" style="<?php echo (!snape_option('background_image')) ? 'background:' . $background_color  :'background-image: url('. $background_image .');' ; ?>">
+	<div class="main container" id="main">
 		<div class="container">
 			<div class="row">
 				<div class="post-list col-md-8">

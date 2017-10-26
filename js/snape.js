@@ -3,7 +3,7 @@
 	
 	// Share Menu	
 	var shareMenu = function() {
-		$(".Share").click(function() {
+		$(".share").click(function() {
 			$(".share-wrap").fadeToggle("slow");
 		});
 
@@ -75,9 +75,4 @@
 		showlove();
 		gotop();
 	});
-
-	console.log("╔╦╗┬ ┬┌─┐┌┬┐┌─┐  ╔═╗┌┐┌┌─┐┌─┐┌─┐  ╔╦╗┌─┐┌┬┐┌─┐  ╔╗ ┬ ┬  ╦  ╦┌┬┐┬─┐┌─┐┬┌─┐\n ║ ├─┤├┤ │││├┤   ╚═╗│││├─┤├─┘├┤   ║║║├─┤ ││├┤   ╠╩╗└┬┘  ╚╗╔╝ │ ├┬┘│ ││└─┐\n ╩ ┴ ┴└─┘┴ ┴└─┘  ╚═╝┘└┘┴ ┴┴  └─┘  ╩ ╩┴ ┴─┴┘└─┘  ╚═╝ ┴    ╚╝  ┴ ┴└─└─┘┴└─┘");
-	console.log("Snape 主题下载：https://github.com/Vtrois/Snape");
-	console.log("Snape 主题使用：https://www.vtrois.com/snape-faq.html");
-	console.log("Snape 文章样式：https://www.vtrois.com/snape-article-style.html")
 }());

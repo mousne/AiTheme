@@ -28,7 +28,12 @@
 
 <?php flush(); ?>
 
-<body data-spy="scroll" data-target=".scrollspy">
+<?php
+$background_color = snape_option('background_color');
+$background_image = snape_option('background_image');
+?>
+
+<body data-spy="scroll" data-target=".scrollspy"  style="<?php echo (!snape_option('background_image')) ? 'background:' . $background_color  :'background-image: url('. $background_image .'); background-position: center 0; background-attachment: fixed; background-size: cover; background-repeat: no-repeat;' ; ?>">
 
 	<!-- navbar -->
 	<nav class="top-bar navbar">

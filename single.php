@@ -9,10 +9,6 @@
 $sidebar = snape_option('side_bar');
 $sidebar = (empty($sidebar)) ? 'right_side' : $sidebar;
 $ad = snape_option('ad_show');
-$banner_image = snape_option('banner_image');
-$background_color = snape_option('background_color');
-$background_image = snape_option('background_image');
-$banner_single_color = snape_option('banner_single_color');
 get_header(); ?>
 
 <?php if (have_posts()) : the_post(); update_post_caches($posts); ?>
@@ -27,7 +23,7 @@ get_header(); ?>
 		<div class='post-container <?php echo ($sidebar == 'single') ? 'col-md-12' : 'col-md-8'; ?>'>
 			<section>
 				<article>
-					<h1 class="post-title"><?php the_title(); ?></h1>
+					<h1 class="post-title"><?php if( get_the_title() == '' ){ echo '无标题'; } else { the_title(); }?></h1>
 					<div class="post-info">
 						<div class="">
 							<span>
@@ -60,13 +56,13 @@ get_header(); ?>
 						<div class="post-like-donate text-center clearfix" id="post-like-donate">
 
 							<?php if ( snape_option( 'post_like_donate' )==1 ) : ?>
-							<a href="<?php echo snape_option('donate_links'); ?>" class="Donate"><i class="fa fa-bitcoin"></i> 打赏</a>
+							<a href="<?php echo snape_option('donate_links'); ?>" class="donate"><i class="fa fa-bitcoin"></i> 打赏</a>
 							<?php endif; ?>
 
-							<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="Love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-thumbs-o-up"></i> 点赞</a>
+							<a href="javascript:;" data-action="love" data-id="<?php the_ID(); ?>" class="love <?php if(isset($_COOKIE['love_'.$post->ID])) echo 'done';?>" ><i class="fa fa-thumbs-o-up"></i> 点赞</a>
 
 							<?php if ( snape_option( 'post_share' )==1 ) : ?>
-							<a href="javascript:;"  class="Share" ><i class="fa fa-share-alt"></i> 分享</a>
+							<a href="javascript:;"  class="share" ><i class="fa fa-share-alt"></i> 分享</a>
 							<div class="share-wrap" style="display: none;">
 								<div class="share-group">
 									<a href="javascript:;" class="share-plain twitter" onclick="share('qq');" rel="nofollow">

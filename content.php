@@ -13,7 +13,7 @@
 		<a href="<?php the_permalink() ?>"><?php snape_blog_thumbnail() ?></a>
 	</header>
 	<?php endif; ?>
-	<h2 class="article-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+	<h2 class="article-title"><a href="<?php the_permalink() ?>"><?php if( get_the_title() == '' ){ echo '无标题'; } else { the_title(); }?></a></h2>
 	<div>
 		<?php $excerptphoto = wp_trim_words(get_the_excerpt(), 120); ?>
 		<p><?php echo $excerptphoto ?></p>
