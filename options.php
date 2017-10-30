@@ -33,7 +33,7 @@ function optionsframework_options() {
 		'name' => '背景颜色',
 		'desc' => '选择背景颜色',
 		'id' => 'background_color',
-		'std' => '#f9f9f9',
+		'std' => '#262626',
 		'type' => 'color' );
 	$options[] = array(
 		'name' => '背景图片',
