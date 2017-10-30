@@ -26,12 +26,10 @@ get_header(); ?>
 					<h1 class="post-title"><?php if( get_the_title() == '' ){ echo '无标题'; } else { the_title(); }?></h1>
 					<div class="post-info">
 						<div class="">
-							<span>
-							<i class="fa fa-calendar"></i> <?php the_time('Y/n/j') ?>
-							<i class="fa fa-commenting-o"></i> <?php echo snape_comments_users($post->ID); ?> Comments
-							<i class="fa fa-eye"></i> <?php echo snape_get_post_views();?> Views
-							<i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?> Times
-							</span>
+							<span><i class="fa fa-calendar"></i> <?php the_time('Y/n/j') ?></span>
+							<span><i class="fa fa-commenting-o"></i> <?php echo snape_comments_users($post->ID); ?><span class="hidden-xs">回复</span></span>
+							<span><i class="fa fa-eye"></i> <?php echo snape_get_post_views();?><span class="hidden-xs">查看</span></span>
+							<span><i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?><span class="hidden-xs">赞</span></span>
 						</div>
 						<div class="footer-tag clearfix">
 							<div class="pull-left">

@@ -222,6 +222,7 @@ a:active{
 /* Main */
 .post-list{
 	background-color: rgba(27,27,27,0.9);
+	border-radius: 4px;
 	box-shadow: 5px 5px 10px 1px #000;
 }
 
@@ -243,6 +244,24 @@ a:active{
 .post-list .article-img{
 	border-radius: 6px;
 	overflow: hidden;
+}
+
+.post-list article footer a{
+	font-size: 14px;
+	white-space: nowrap;
+}
+
+.post-list article footer a+a{
+	margin-left: 5px;
+}
+
+@media screen and (max-width: 767px){
+	.post-list article footer a{
+		font-size: 12px;
+	}
+	.post-list article footer a+a{
+		margin-left: 0;
+	}
 }
 
 .post-list .pagination>li>a,
@@ -317,6 +336,11 @@ a:active{
 	font-size: 14px;
 }
 
+.post-info span{
+	padding-right: 5px;
+	white-space: nowrap;
+}
+
 .post-content{
 	padding: 10px 0;
 	border-bottom: 1px solid #333;
@@ -342,13 +366,13 @@ a:active{
 	margin: 0 2px;
 	width: 130px;
 	height: 40px;
-	border-radius: 4px;
-	box-shadow: none;
 	text-align: center;
 	text-decoration: none;
 	font-size: 14.5px;
 	line-height: 40px;
-	background-color: #333;
+	background-color: #000;
+	border-radius: 4px;
+	box-shadow: none;
 	-webkit-transition: all .3s ease;
 	transition: all .3s ease
 }
@@ -397,6 +421,11 @@ a:active{
 
 .post-like-donate .twitter:focus{
 	color: #55acee !important
+}
+
+.footer-tag a{
+	padding-right: 5px;
+	white-space: nowrap;
 }
 
 @media screen and (max-width:768px){

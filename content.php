@@ -19,16 +19,10 @@
 		<p><?php echo $excerptphoto ?></p>
 	</div>
 	<footer>
-		<span>
-		<a href="#"><i class="fa fa-calendar"></i> <?php the_time('Y/n/j') ?></a>
-		</span>
-		<span>
-		<?php $category = get_the_category(); echo '<a href="' . get_category_link($category[0] -> term_id) . '"><i class="fa fa-folder-open-o"></i> ' . $category[0] -> cat_name . '</a>'; ?>
-		<a href="<?php the_permalink() ?>#respond"><i class="fa fa-commenting-o"></i> <?php echo snape_comments_users($post->ID); ?> Comments</a>
-		</span>
-		<span>
-		<a href="<?php the_permalink() ?>"><i class="fa fa-eye"></i> <?php echo snape_get_post_views(); ?> Views</a>
-		<a href="<?php the_permalink() ?>"><i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?> Times</a>
-		</span>
+		<a href="#" title="创建时间"><i class="fa fa-calendar"></i> <?php the_time('Y/n/j') ?></a>
+		<?php $category = get_the_category(); echo '<a href="' . get_category_link($category[0] -> term_id) . '" title="分类"><i class="fa fa-folder-open-o"></i> ' . $category[0] -> cat_name . '</a>'; ?>
+		<a href="<?php the_permalink() ?>#respond" title="回复"><i class="fa fa-commenting-o"></i> <?php echo snape_comments_users($post->ID); ?> <span class="hidden-xs">回复</span></a>
+		<a href="<?php the_permalink() ?>" title="查看"><i class="fa fa-eye"></i> <?php echo snape_get_post_views(); ?> <span class="hidden-xs">查看</span></a>
+		<a href="<?php the_permalink() ?>" title="赞"><i class="fa fa-thumbs-o-up"></i> <?php if( get_post_meta($post->ID,'love',true) ){ echo get_post_meta($post->ID,'love',true); } else { echo '0'; }?> <span class="hidden-xs">赞</span></a>
 	</footer>
 </article>
